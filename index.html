@@ -446,8 +446,8 @@
         
         .profile-image {
             width: 100%;
-            max-width: 350px;
-            aspect-ratio: 3/4;
+            max-width: 250px;
+            aspect-ratio: 1/1;
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             border-radius: 15px;
             display: flex;
@@ -510,7 +510,7 @@
         
         .expertise-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 0.8rem;
         }
         
@@ -555,6 +555,8 @@
         .form-container {
             position: relative;
             z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .form-grid {
@@ -645,6 +647,10 @@
         .submit-btn:hover {
             transform: translateY(-5px);
             box-shadow: 0 25px 60px rgba(212, 175, 55, 0.5);
+        }
+        
+        .contact-section .section-title {
+            color: white;
         }
         
         /* Success Message */
@@ -903,7 +909,7 @@
     <header>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">Trusted Legal Counsel</div>
+            <div class="hero-badge">Asian Star Law Firm</div>
             <div class="scales-icon">⚖️</div>
             <h1>Muhammad Ashraf Qureshi</h1>
             <p class="hero-subtitle">Senior Civil Judge (R) | Ph.D Law Scholar (IIU)</p>
