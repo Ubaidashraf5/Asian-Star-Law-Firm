@@ -1157,7 +1157,7 @@
             });
         });
         
-        // Smooth scrolling for navigation
+        // Smooth scrolling for navigation - FIXED VERSION
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1165,8 +1165,11 @@
                 if (targetId === '#') return;
                 
                 const targetSection = document.querySelector(targetId);
+                if (!targetSection) return;
+                
                 const navHeight = document.querySelector('nav').offsetHeight;
-                const targetPosition = targetSection.offsetTop - navHeight;
+                // Add extra offset to ensure proper positioning
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -1276,5 +1279,3 @@
 </body>
 
 </html>
-
-
